@@ -10,21 +10,25 @@ brotlipy==0.7.0
 certifi==2020.6.20
 cffi @ file:///D:/bld/cffi_1613414034267/work
 chardet @ file:///D:/bld/chardet_1610093644405/work
+click==7.1.2
 colorama @ file:///home/conda/feedstock_root/build_artifacts/colorama_1602866480661/work
 cryptography @ file:///D:/bld/cryptography_1612994017605/work
 cycler==0.10.0
 decorator==4.4.2
 defusedxml==0.6.0
 entrypoints @ file:///home/conda/feedstock_root/build_artifacts/entrypoints_1605121927639/work/dist/entrypoints-0.3-py2.py3-none-any.whl
+Flask==1.1.2
 idna @ file:///home/conda/feedstock_root/build_artifacts/idna_1593328102638/work
 importlib-metadata @ file:///D:/bld/importlib-metadata_1614193918404/work
 ipykernel @ file:///D:/bld/ipykernel_1613853146220/work/dist/ipykernel-5.5.0-py3-none-any.whl
 ipython @ file:///D:/bld/ipython_1614393754223/work
 ipython-genutils==0.2.0
+itsdangerous==1.1.0
 jedi @ file:///D:/bld/jedi_1610146981085/work
 Jinja2 @ file:///home/conda/feedstock_root/build_artifacts/jinja2_1612119311452/work
 joblib @ file:///tmp/build/80754af9/joblib_1601912903842/work
 json5 @ file:///home/conda/feedstock_root/build_artifacts/json5_1600692310011/work
+jsonify==0.5
 jsonschema @ file:///home/conda/feedstock_root/build_artifacts/jsonschema_1602551949684/work
 jupyter-client @ file:///home/conda/feedstock_root/build_artifacts/jupyter_client_1610375432619/work
 jupyter-core @ file:///D:/bld/jupyter_core_1612125436808/work
@@ -73,6 +77,7 @@ scipy @ file:///C:/ci/scipy_1614023124510/work
 seaborn @ file:///tmp/build/80754af9/seaborn_1608578541026/work
 Send2Trash==1.5.0
 six @ file:///home/conda/feedstock_root/build_artifacts/six_1590081179328/work
+sklearn==0.0
 sniffio @ file:///D:/bld/sniffio_1610318546199/work
 terminado @ file:///D:/bld/terminado_1609794338660/work
 testpath==0.4.4
@@ -83,6 +88,7 @@ typing-extensions @ file:///home/conda/feedstock_root/build_artifacts/typing_ext
 urllib3 @ file:///home/conda/feedstock_root/build_artifacts/urllib3_1611695416663/work
 wcwidth @ file:///home/conda/feedstock_root/build_artifacts/wcwidth_1600965781394/work
 webencodings==0.5.1
+Werkzeug==1.0.1
 win-inet-pton @ file:///D:/bld/win_inet_pton_1610147627696/work
 wincertstore==0.2
 zipp @ file:///home/conda/feedstock_root/build_artifacts/zipp_1603668650351/work
