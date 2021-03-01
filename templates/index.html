@@ -9,10 +9,9 @@
 
 <body>
     
-    <div style="color:whitesmoke;">
+    <div style="color:whitesmoke;width: 50%;float: left;">
         <form action="{{ url_for('predict')}}" method="post">
-            <h1 style="margin: 0px;width: fit-content;">Car Price Prediction</h1>
-            <span style="text-align: right;">by <a href="https://www.linkedin.com/in/varun-kedia-11061115a/">Varun Kedia</a></span>
+            <h1 style="margin: 0px;width: fit-content;text-align: left;"><a href="https://www.linkedin.com/in/varun-kedia-11061115a/">Car Price Prediction</a></h1>
             <hr>
             <h1 style="color: red;">{{ prediction_text }}</h1>
             <h3>Year in which car was bought</h3>
@@ -44,9 +43,10 @@
             <button id="sub" type="submit ">Calculate the Selling Price</button>
         </form>
     </div>
-
-
-
+    <div style="color: whitesmoke;margin-top: 10%;margin-left: 60% ;">
+        <h3>Correlation bw Selling Price and Age of Car</h2>
+        <img src="final1.png" alt="">
+    </div>
 
     <style>
         button {
@@ -66,7 +66,7 @@
         }
         a {
             text-decoration: none;
-            color:red;
+            color:white;
         }
         a:hover {
             color : gold;
