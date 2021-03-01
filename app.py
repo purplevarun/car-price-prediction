@@ -19,12 +19,14 @@ def predict():
     if request.method == 'POST':
         Year = int(request.form['Year'])
         Year2 = int(request.form['Year2'])
+        if Year2 < Year : return render_template('index.html',prediction_text="Can't sell the car before buying it......")
         Present_Price=float(request.form['Present_Price'])
         Kms_Driven=int(request.form['Kms_Driven'])
         if Kms_Driven == 0: Kms_Driven = 1
         # Kms_Driven2=np.log(Kms_Driven)
         Kms_Driven2 = Kms_Driven
-        Owner=int(request.form['Owner'])+1
+        Owner=int(request.form['Owner'])
+        if Owner == 0: Owner+=1
         Fuel_Type_Petrol=request.form['Fuel_Type_Petrol']
         if(Fuel_Type_Petrol=='Petrol'):
                 Fuel_Type_Petrol=1
@@ -32,7 +34,7 @@ def predict():
         else:
             Fuel_Type_Petrol=0
             Fuel_Type_Diesel=1
-        Year=Year2-Year
+        Year=(Year2-Year)*100
         Seller_Type_Individual=request.form['Seller_Type_Individual']
         if(Seller_Type_Individual=='Individual'):
             Seller_Type_Individual=1
@@ -46,7 +48,7 @@ def predict():
         prediction=model.predict([[Present_Price,Kms_Driven2,Owner,Year,Fuel_Type_Diesel,Fuel_Type_Petrol,Seller_Type_Individual,Transmission_Mannual]])
         output=round(prediction[0],2)
         if output<0:
-            return render_template('index.html',prediction_texts="Sorry you cannot sell this car")
+            return render_template('index.html',prediction_text="Sorry you cannot sell this car")
         else:
             return render_template('index.html',prediction_text="Optimal Price of Car = {}".format(output))
     else:
