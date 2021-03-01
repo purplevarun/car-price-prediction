@@ -9,7 +9,7 @@
 
 <body>
     
-    <div style="color:whitesmoke;width: 50%;float: left;">
+    <div style="color:whitesmoke;width: 100%;float: left;">
         <form action="{{ url_for('predict')}}" method="post">
             <h1 style="margin: 0px;width: fit-content;text-align: left;"><a href="https://www.linkedin.com/in/varun-kedia-11061115a/">Car Price Prediction</a></h1>
             <hr>
@@ -20,10 +20,10 @@
             <input id="first" name="Year2" type="number" value="2021">
             <h3>What is the Showroom Price?(In lakhs)</h3>
             <input id="second" name="Present_Price" required="required" value="10">
-            <h3>How Many Kilometers Drived?</h3>
-            <input id="third" name="Kms_Driven" required="required" value="5000">
-            <h3>How much owners previously had the car(1 or 2 or 3) ?</h3>
-            <input id="fourth" name="Owner" required="required" value = "1">
+            <h3>How Many Kilometers Driven?</h3>
+            <input id="third" name="Kms_Driven" required="required" value="100000">
+            <!-- <h3>How many owners previously had the car(1 or 2 or 3) ?</h3> -->
+            <!-- <input id="fourth" name="Owner" required="required" value = "1"> -->
             <h3>What Is the Fuel type?</h3>
             <select name="Fuel_Type_Petrol" id="fuel" required="required">
                 <option value="Petrol">Petrol</option>
@@ -41,15 +41,19 @@
                 <option value="Automatic" selected>Automatic Car</option>
             </select>
             <button id="sub" type="submit ">Calculate the Selling Price</button>
+            <p></p>
         </form>
     </div>
-    <div style="color: whitesmoke;margin-top: 5%;margin-left: 60% ;">
-        <h3>Correlation bw Selling Price and Age of Car</h2>
+    
+    <hr><hr>
+    <div style="color: whitesmoke;margin-top: 2% ;">
+        <h3 style="text-decoration: underline; margin:5px;">Based on Random Forest Regression Model</h3>
+        <h3>Correlation bw Selling Price and Age of Car</h3>
         <p style="text-align: center;"><img src="static/corr2.png" alt=""></p>
-        <h3>Correlation bw Selling Price and KMs driven</h2>
+        <h3>Correlation bw Selling Price and KMs driven</h3>
         <p style="text-align: center;"><img src="static/corr1.png" alt=""></p>
     </div>
-
+    <footer style="color: whitesmoke;">by <a style="color: red;" href="https://www.linkedin.com/in/varun-kedia-11061115a/">Varun Kedia</a></footer>
     <style>
         button {
             background-color: transparent;

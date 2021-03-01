@@ -25,8 +25,9 @@ def predict():
         if Kms_Driven == 0: Kms_Driven = 1
         # Kms_Driven2=np.log(Kms_Driven)
         Kms_Driven2 = Kms_Driven
-        Owner=int(request.form['Owner'])
-        if Owner == 0: Owner+=1
+        # Owner=int(request.form['Owner'])
+        # if Owner == 0: Owner+=1
+        Owner = 1
         Fuel_Type_Petrol=request.form['Fuel_Type_Petrol']
         if(Fuel_Type_Petrol=='Petrol'):
                 Fuel_Type_Petrol=1
